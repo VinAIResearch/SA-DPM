@@ -1,0 +1,5 @@
+.vscode
+__pycache__/
+bash_scripts/
+exp/
+*.pth
