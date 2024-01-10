@@ -9,6 +9,17 @@
 
 # Official PyTorch implementation of "On Inference Stability for Diffusion Models" [(AAAI'24)](https://arxiv.org/abs/2312.12431)
 
+Details of algorithms and experimental results can be found in [our following paper](https://arxiv.org/abs/2312.12431):
+```bibtex
+@article{nguyen2023inference,
+  title={On Inference Stability for Diffusion Models},
+  author={Viet Nguyen and Giang Vu and Tung Nguyen Thanh and Khoat Than and Toan Tran},
+  journal={arXiv preprint arXiv:2312.12431},
+  year={2023}
+}
+```
+**Please CITE** our paper whenever this repository is used to help produce published results or incorporated into other software.
+
 ## Installation ##
 Python `3.8.0` and Pytorch `2.0.0` are used in this implementation.
 
