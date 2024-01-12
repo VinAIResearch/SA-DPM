@@ -8,14 +8,25 @@
 7. [Contacts](#contacts)
 
 # Official PyTorch implementation of "On Inference Stability for Diffusion Models" [(AAAI'24)](https://arxiv.org/abs/2312.12431)
+<div align="center">
+  <a href="https://github.com/viettmab" target="_blank">Viet&nbsp;Nguyen</a> &emsp;
+  <a href="https://github.com/ginlov" target="_blank">Giang&nbsp;Vu</a> &emsp;
+  <a href="https://github.com/tungnthust" target="_blank">Tung&nbsp;Nguyen&nbsp;Thanh</a> &emsp;
+  <a href="https://users.soict.hust.edu.vn/khoattq/index.htm" target="_blank">Khoat&nbsp;Than</a> &emsp;
+  <a href="https://scholar.google.com.vn/citations?user=PnwSuNMAAAAJ" target="_blank">Toan&nbsp;Tran</a>
+  <br> <br>
+  
+</div>
+
+> **Abstract**: Denoising Probabilistic Models (DPMs) represent an emerging domain of generative models that excel in generating diverse and high-quality images. However, most current training methods for DPMs often neglect the correlation between timesteps, limiting the model's performance in generating images effectively. Notably, we theoretically point out that this issue can be caused by the cumulative estimation gap between the predicted and the actual trajectory. To minimize that gap, we propose a novel sequence-aware loss that aims to reduce the estimation gap to enhance the sampling quality. Furthermore, we theoretically show that our proposed loss function is a tighter upper bound of the estimation loss in comparison with the conventional loss in DPMs. Experimental results on several benchmark datasets including CIFAR10, CelebA, and CelebA-HQ consistently show a remarkable improvement of our proposed method regarding the image generalization quality measured by FID and Inception Score compared to several DPM baselines.
 
 Details of algorithms and experimental results can be found in [our following paper](https://arxiv.org/abs/2312.12431):
 ```bibtex
-@article{nguyen2023inference,
+@inproceedings{nguyen2024inference,
   title={On Inference Stability for Diffusion Models},
   author={Viet Nguyen and Giang Vu and Tung Nguyen Thanh and Khoat Than and Toan Tran},
-  journal={arXiv preprint arXiv:2312.12431},
-  year={2023}
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence}
+  year={2024}
 }
 ```
 **Please CITE** our paper whenever this repository is used to help produce published results or incorporated into other software.
@@ -29,7 +40,7 @@ conda env create -f environment.yml
 conda activate sadpm
 ``` -->
 
-<!-- Or you can install neccessary libraries as follows:
+<!-- Or you can install the necessary libraries as follows:
 ```bash
 pip install -r requirements.txt
 ``` -->
@@ -67,7 +78,7 @@ where:
 - `<DATASET>`: `cifar10`, `celeba`, `celebahq`, `afhq`, and `ffhq64`.
 - `<K>`: the number of consecutive steps (e.g. 2, 3, 4).
 - `<lamda>`: the coefficient of SA loss (e.g. 0.2, 0.5).
-- `<#GPUS>`: the number of used gpus (e.g. 1, 2, 4, 8).
+- `<#GPUS>`: the number of used GPUs (e.g. 1, 2, 4, 8).
 
 ## Models and Hyperparameters ##
 
@@ -106,7 +117,7 @@ CelebA-HQ 256x256 with the SA_DPM loss [[checkpoint](https://drive.google.com/dr
 python train_ddp.py --config celebahq.yml --doc celebahq_sa --ni --num_consecutive_steps 2 --lamda 0.1 --num_process_per_node 4
 ```
 
-Downloaded pre-trained models should be put in should be put in `exp/logs/<MODEL_NAME>` (e.g. `<MODEL_NAME>`:  celeba_sa, afhq_simple, ...)
+Downloaded pre-trained models should be put in `exp/logs/<MODEL_NAME>` (e.g. `<MODEL_NAME>`:  celeba_sa, afhq_simple, ...)
 
 ## Evaluation ##
 ### FID ###
@@ -122,7 +133,7 @@ where:
 - `<#STEPS>`: the number of sampling steps (e.g. 10, 50, 100, 200, 1000).
 - `<ckpt_id>`: the id of the best checkpoint  (e.g. 800, 850, 900, ...).
 - `<ETA>`: controls the scale of the variance (0 is DDIM, and 1 is one type of DDPM).
-- `<#GPUS>`: the number of used gpus (e.g. 1, 2, 4, 8).
+- `<#GPUS>`: the number of used GPUs (e.g. 1, 2, 4, 8).
 
 Example: 
 ```bash

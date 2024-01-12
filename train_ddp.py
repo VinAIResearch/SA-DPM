@@ -1,9 +1,3 @@
-# ---------------------------------------------------------------
-# Copyright (c) 2022, NVIDIA CORPORATION. All rights reserved.
-#
-# This work is licensed under the NVIDIA Source Code License
-# for Denoising Diffusion GAN. To view a copy of this license, see the LICENSE file.
-# ---------------------------------------------------------------
 import argparse
 import logging
 import os
@@ -285,7 +279,6 @@ if __name__ == "__main__":
     args.world_size = args.num_proc_node * args.num_process_per_node
     size = args.num_process_per_node
 
-    # torch.multiprocessing.set_start_method('spawn')# good solution !!!!
     if size > 1:
         processes = []
         for rank in range(size):

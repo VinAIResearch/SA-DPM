@@ -29,7 +29,7 @@ diffusion:
     num_diffusion_timesteps: 1000
 
 training:
-    batch_size: 64
+    batch_size: 64 # If we use 4 GPUs for training, the total batch size is 64 * 4 = 256.
     n_epochs: 1500
     n_iters: 500000
     snapshot_freq: 25
