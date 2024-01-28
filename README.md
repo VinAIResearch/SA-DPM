@@ -10,7 +10,7 @@
 # Official PyTorch implementation of "On Inference Stability for Diffusion Models" [(AAAI'24)](https://arxiv.org/abs/2312.12431)
 <div align="center">
   <a href="https://github.com/viettmab" target="_blank">Viet&nbsp;Nguyen</a> &emsp;
-  <a href="https://github.com/ginlov" target="_blank">Giang&nbsp;Vu</a> &emsp;
+  <a href="https://ginlov.github.io" target="_blank">Giang&nbsp;Vu</a> &emsp;
   <a href="https://github.com/tungnthust" target="_blank">Tung&nbsp;Nguyen&nbsp;Thanh</a> &emsp;
   <a href="https://users.soict.hust.edu.vn/khoattq/index.htm" target="_blank">Khoat&nbsp;Than</a> &emsp;
   <a href="https://scholar.google.com.vn/citations?user=PnwSuNMAAAAJ" target="_blank">Toan&nbsp;Tran</a>
@@ -30,6 +30,11 @@ Details of algorithms and experimental results can be found in [our following pa
 }
 ```
 **Please CITE** our paper whenever this repository is used to help produce published results or incorporated into other software.
+
+**News**
+- [17th Jan, 2024]: Our paper got selected as an oral presentation at AAAI 2024!
+
+
 
 ## Installation ##
 Python `3.8.0` and Pytorch `2.0.0` are used in this implementation.
