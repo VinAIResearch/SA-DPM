@@ -32,13 +32,7 @@ Details of algorithms and experimental results can be found in [our following pa
 **Please CITE** our paper whenever this repository is used to help produce published results or incorporated into other software.
 
 **News**
-<<<<<<< HEAD
 - [17th Jan, 2024]: Our paper got selected as an [oral presentation](https://aaai.org/wp-content/uploads/2024/01/AAAI-24-Oral-Papers-Schedule.pdf) at AAAI 2024!
-=======
-- [17th Jan, 2024]: Our paper got selected as an oral presentation at AAAI 2024!
->>>>>>> a48ab589abf39c9ebd7d18a8798d495e1a0cf4e1
-
-
 
 ## Installation ##
 Python `3.8.0` and Pytorch `2.0.0` are used in this implementation.
